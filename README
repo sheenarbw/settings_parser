@@ -1,0 +1,31 @@
+Hi roman
+
+from settings_parser import Settings
+Settings('path_to_ini_file.ini')
+
+Now your settings are available anywhere in your script (or any script included in the current process, so imported stuff even)
+
+
+To access settings:
+
+from settings_parser import Settings
+xValue = Settings.dSettings[heading_key][value_key]
+
+An ini file looks something like:
+-----------------------------------------------------
+
+[heading_key_1]
+
+value_key_1:blah
+value_key_2:blah
+value_key_3:blah
+
+[heading_key_2]
+
+value_key_4:blah
+value_key_5:blah
+value_key_6:blah
+
+----------------------------------------------------
+
+
