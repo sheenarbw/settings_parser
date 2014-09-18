@@ -1,7 +1,8 @@
 class Settings:
     dSettings = {}
-    
+    sPath = None
     def __init__(self,sPath=""):
+        Settings.sPath = sPath
         if sPath:
             Settings.dSettings = Settings.parse_settings(sPath)
 
