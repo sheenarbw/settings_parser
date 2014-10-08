@@ -1,7 +1,0 @@
-README
-settings_parser.py
-setup.py
-settings_parser.egg-info/PKG-INFO
-settings_parser.egg-info/SOURCES.txt
-settings_parser.egg-info/dependency_links.txt
-settings_parser.egg-info/top_level.txt
