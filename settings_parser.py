@@ -6,6 +6,23 @@ class Settings:
         if sPath:
             Settings.dSettings = Settings.parse_settings(sPath)
 
+    @classmethod
+    def __getitem__(cls,sKey):
+        return Settings.dSettings[sKey]
+
+    @staticmethod 
+    def get(sKey,xDefault=None):
+        return Settings.dSettings.get(sKey,xDefault)
+
+
+    @staticmethod
+    def append_pyramid_settings(**dSettings):
+        for s in dSettings:
+            l = s.split('.')
+            if l[0] not in Settings.dSettings:
+                Settings.dSettings[l[0]] = {}
+            Settings.dSettings[l[0]][l[1]] = dSettings[s]
+
     @staticmethod
     def parse_setting(sSetting):
         #TODO: other datatypes
